@@ -114,7 +114,7 @@ test.each([429, 500, 502, 503, 504])(
     expect(JSON.parse(fetchMock.mock.calls[1][1].body)).toMatchObject({
       model: OPENROUTER_FALLBACK_MODEL,
       provider: {
-        only: ["openai"],
+        only: ["azure"],
         allow_fallbacks: false,
         data_collection: "deny",
         zdr: true,
@@ -136,7 +136,7 @@ test("persistent overload stops after two attempts with a safe code", async () =
   expect(JSON.parse(fetchMock.mock.calls[1][1].body)).toMatchObject({
     model: OPENROUTER_FALLBACK_MODEL,
     provider: {
-      only: ["openai"],
+      only: ["azure"],
       allow_fallbacks: false,
       data_collection: "deny",
       zdr: true,

@@ -68,11 +68,11 @@ export default function About() {
       <h2>IA para ajudar a escrever</h2>
       <p>
         O rascunho é gerado através do OpenRouter, com o modelo Mistral Large e,
-        se este estiver temporariamente indisponível, GPT-4.1 Mini da OpenAI.
-        Pode conter erros, omissões ou formulações que não representam o que
-        queres dizer. Corrige-o e remove qualquer informação que não reconheças.
-        A aplicação nunca envia cartas automaticamente a representantes
-        políticos.
+        se este estiver temporariamente indisponível, GPT-4.1 Mini da OpenAI,
+        disponibilizado pela Microsoft Azure. Pode conter erros, omissões ou
+        formulações que não representam o que queres dizer. Corrige-o e remove
+        qualquer informação que não reconheças. A aplicação nunca envia cartas
+        automaticamente a representantes políticos.
       </p>
       <h2>Origem, licença e contacto</h2>
       <p>

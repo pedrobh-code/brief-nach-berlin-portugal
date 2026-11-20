@@ -47,7 +47,7 @@ export async function generateBody(
           max_tokens: 1100,
           stream: false,
           provider: {
-            only: [attempt === 0 ? "mistral" : "openai"],
+            only: [attempt === 0 ? "mistral" : "azure"],
             allow_fallbacks: false,
             data_collection: "deny",
             zdr: true,
