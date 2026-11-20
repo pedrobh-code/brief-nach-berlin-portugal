@@ -53,14 +53,14 @@ test("missing key never sends a request", async () => {
   );
   expect(fetchMock).not.toHaveBeenCalled();
 });
-test.each([401, 402, 429, 500])(
+test.each([401, 402, 403, 404, 500])(
   "rejects HTTP %s without disclosing provider detail",
   async (status) => {
     fetchMock.mockResolvedValue(
       new Response("sensitive provider detail", { status }),
     );
     await expect(generateBody(input, recipient, "Lisboa")).rejects.toThrow(
-      "AI_PROVIDER_UNAVAILABLE",
+      `AI_HTTP_${status}`,
     );
     expect(fetchMock).toHaveBeenCalledTimes(1);
   },
@@ -81,13 +81,49 @@ test.each([
 ])("rejects incomplete or error responses", async (payload) => {
   fetchMock.mockResolvedValue(new Response(JSON.stringify(payload)));
   await expect(generateBody(input, recipient, "Lisboa")).rejects.toThrow(
-    "INVALID_AI_RESPONSE",
+    "AI_RESPONSE",
   );
 });
 test("timeouts propagate to the route's safe failure handling", async () => {
-  fetchMock.mockRejectedValue(new DOMException("Timed out", "TimeoutError"));
+  fetchMock.mockRejectedValue(
+    new DOMException("AI_CONNECTION", "TimeoutError"),
+  );
   await expect(generateBody(input, recipient, "Lisboa")).rejects.toThrow(
-    "Timed out",
+    "AI_CONNECTION",
   );
   expect(fetchMock).toHaveBeenCalledTimes(1);
+});
+
+test.each([429, 502, 503, 504])(
+  "recovers from temporary HTTP %s once",
+  async (status) => {
+    fetchMock.mockResolvedValueOnce(new Response("private detail", { status }));
+    fetchMock.mockResolvedValueOnce(
+      new Response(
+        JSON.stringify({
+          choices: [{ finish_reason: "stop", message: { content: letter } }],
+        }),
+      ),
+    );
+    expect(await generateBody(input, recipient, "Lisboa")).toBe(letter);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(fetchMock.mock.calls[0][1].signal).toBe(
+      fetchMock.mock.calls[1][1].signal,
+    );
+  },
+);
+test("persistent overload stops after two attempts with a safe code", async () => {
+  fetchMock.mockImplementation(
+    async () => new Response("private detail", { status: 503 }),
+  );
+  await expect(generateBody(input, recipient, "Lisboa")).rejects.toThrow(
+    "AI_HTTP_503",
+  );
+  expect(fetchMock).toHaveBeenCalledTimes(2);
+});
+test("invalid JSON has a safe diagnostic", async () => {
+  fetchMock.mockResolvedValue(new Response("private malformed response"));
+  await expect(generateBody(input, recipient, "Lisboa")).rejects.toThrow(
+    "AI_RESPONSE",
+  );
 });

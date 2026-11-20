@@ -5,6 +5,7 @@ import { POST } from "../app/api/generate-letter/route";
 import { generateBody } from "../lib/openrouter";
 import { getParliament } from "../lib/lookup/data";
 import { letterMessages } from "../lib/generation/prompt";
+import { HttpError } from "../lib/http";
 import { letterInputSchema } from "../lib/validation";
 const person = snapshot.representatives[0];
 const input = {
@@ -93,4 +94,13 @@ test("bounds text and requires actual consent", () => {
   expect(
     letterInputSchema.safeParse({ ...input, consent: "true" }).success,
   ).toBe(false);
+});
+
+test("preserves safe provider diagnostics in the route response", async () => {
+  jest
+    .mocked(generateBody)
+    .mockRejectedValue(new HttpError(503, "Verifica o saldo. (AI_HTTP_402)"));
+  const r = await POST(request(input));
+  expect(r.status).toBe(503);
+  expect((await r.json()).error).toContain("AI_HTTP_402");
 });
