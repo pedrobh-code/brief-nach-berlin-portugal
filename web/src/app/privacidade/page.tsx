@@ -32,7 +32,8 @@ export default function Privacy() {
           Ao aceitares e pedires um rascunho, o assunto, o destinatário
           escolhido e as preferências de escrita passam pelo servidor alojado na
           Olaia e são enviados ao OpenRouter, que encaminha o pedido para a
-          Mistral, fornecedora do modelo.
+          Mistral ou, em caso de indisponibilidade temporária, para a OpenAI,
+          fornecedora do modelo alternativo.
         </li>
         <li>
           A aplicação não guarda assuntos nem cartas numa base de dados e não
@@ -56,12 +57,12 @@ export default function Privacy() {
       <h2>Fornecedores e escolhas</h2>
       <p>
         O alojamento está configurado na região europeia disponibilizada pela
-        Olaia. O OpenRouter intermedeia a geração de texto e a Mistral fornece o
-        modelo. Este percurso não garante tratamento exclusivo na União
-        Europeia. Os termos, prazos de retenção, subcontratantes e eventuais
-        transferências internacionais aplicáveis devem ser confirmados pelo
-        operador nas respetivas contas antes de disponibilizar o serviço ao
-        público.
+        Olaia. O OpenRouter intermedeia a geração de texto. A Mistral fornece o
+        modelo principal e a OpenAI fornece o modelo alternativo. Este percurso
+        não garante tratamento exclusivo na União Europeia. Os termos, prazos de
+        retenção, subcontratantes e eventuais transferências internacionais
+        aplicáveis devem ser confirmados pelo operador nas respetivas contas
+        antes de disponibilizar o serviço ao público.
       </p>
       <p>
         Consulta a{" "}

@@ -1,4 +1,8 @@
-import { generateBody, OPENROUTER_MODEL } from "../lib/openrouter";
+import {
+  generateBody,
+  OPENROUTER_MODEL,
+  OPENROUTER_FALLBACK_MODEL,
+} from "../lib/openrouter";
 import data from "../../data/parliament.json";
 const recipient = data.representatives[0];
 const input = {
@@ -53,7 +57,7 @@ test("missing key never sends a request", async () => {
   );
   expect(fetchMock).not.toHaveBeenCalled();
 });
-test.each([401, 402, 403, 404, 500])(
+test.each([401, 402, 403, 404])(
   "rejects HTTP %s without disclosing provider detail",
   async (status) => {
     fetchMock.mockResolvedValue(
@@ -94,8 +98,8 @@ test("timeouts propagate to the route's safe failure handling", async () => {
   expect(fetchMock).toHaveBeenCalledTimes(1);
 });
 
-test.each([429, 502, 503, 504])(
-  "recovers from temporary HTTP %s once",
+test.each([429, 500, 502, 503, 504])(
+  "uses the fallback for temporary HTTP %s",
   async (status) => {
     fetchMock.mockResolvedValueOnce(new Response("private detail", { status }));
     fetchMock.mockResolvedValueOnce(
@@ -107,6 +111,15 @@ test.each([429, 502, 503, 504])(
     );
     expect(await generateBody(input, recipient, "Lisboa")).toBe(letter);
     expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(JSON.parse(fetchMock.mock.calls[1][1].body)).toMatchObject({
+      model: OPENROUTER_FALLBACK_MODEL,
+      provider: {
+        only: ["openai"],
+        allow_fallbacks: false,
+        data_collection: "deny",
+        zdr: true,
+      },
+    });
     expect(fetchMock.mock.calls[0][1].signal).toBe(
       fetchMock.mock.calls[1][1].signal,
     );
@@ -120,6 +133,15 @@ test("persistent overload stops after two attempts with a safe code", async () =
     "AI_HTTP_503",
   );
   expect(fetchMock).toHaveBeenCalledTimes(2);
+  expect(JSON.parse(fetchMock.mock.calls[1][1].body)).toMatchObject({
+    model: OPENROUTER_FALLBACK_MODEL,
+    provider: {
+      only: ["openai"],
+      allow_fallbacks: false,
+      data_collection: "deny",
+      zdr: true,
+    },
+  });
 });
 test("invalid JSON has a safe diagnostic", async () => {
   fetchMock.mockResolvedValue(new Response("private malformed response"));

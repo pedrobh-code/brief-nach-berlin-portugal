@@ -6,6 +6,7 @@ import { APP_NAME, APP_URL } from "./config";
 import { HttpError } from "./http";
 
 export const OPENROUTER_MODEL = "mistralai/mistral-large-2512";
+export const OPENROUTER_FALLBACK_MODEL = "openai/gpt-4.1-mini";
 const responseSchema = z.object({
   error: z.unknown().optional(),
   choices: z
@@ -25,7 +26,7 @@ export async function generateBody(
 ) {
   const key = process.env.OPENROUTER_API_KEY?.trim();
   if (!key) throw new Error("AI_NOT_CONFIGURED");
-  // One shared deadline bounds both attempts. Never retry authentication,
+  // One shared deadline bounds the primary and fallback. Never retry authentication,
   // credit, moderation or malformed-output failures.
   const signal = AbortSignal.timeout(45000);
   for (let attempt = 0; attempt < 2; attempt++) {
@@ -40,13 +41,13 @@ export async function generateBody(
           "X-Title": APP_NAME,
         },
         body: JSON.stringify({
-          model: OPENROUTER_MODEL,
+          model: attempt === 0 ? OPENROUTER_MODEL : OPENROUTER_FALLBACK_MODEL,
           messages: letterMessages(input, recipient, constituency),
           temperature: 0.4,
           max_tokens: 1100,
           stream: false,
           provider: {
-            only: ["mistral"],
+            only: [attempt === 0 ? "mistral" : "openai"],
             allow_fallbacks: false,
             data_collection: "deny",
             zdr: true,
@@ -68,7 +69,7 @@ export async function generateBody(
       await response.body?.cancel();
       if (
         attempt === 0 &&
-        [429, 502, 503, 504].includes(status) &&
+        [429, 500, 502, 503, 504].includes(status) &&
         !signal.aborted
       ) {
         await new Promise((resolve) => setTimeout(resolve, 500));
