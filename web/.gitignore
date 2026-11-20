@@ -61,3 +61,6 @@ next-env.d.ts
 .lastcall-cohort-*.csv*
 .lastcall-send-journal-*.json*
 .lastcall-preview.*
+/test-results/
+/playwright-report/
+/data/*.tmp

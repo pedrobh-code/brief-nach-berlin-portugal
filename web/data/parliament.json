@@ -1,0 +1,1708 @@
+{
+  "legislature": "XVII",
+  "fetchedAt": "2026-11-20T10:58:07.070Z",
+  "sourceDate": "2026-11-19",
+  "sourceUrl": "https://www.parlamento.pt/Cidadania/Paginas/DAInformacaoBase.aspx",
+  "constituencies": [
+    {
+      "id": "19",
+      "name": "Açores"
+    },
+    {
+      "id": "1",
+      "name": "Aveiro"
+    },
+    {
+      "id": "2",
+      "name": "Beja"
+    },
+    {
+      "id": "3",
+      "name": "Braga"
+    },
+    {
+      "id": "4",
+      "name": "Bragança"
+    },
+    {
+      "id": "5",
+      "name": "Castelo Branco"
+    },
+    {
+      "id": "6",
+      "name": "Coimbra"
+    },
+    {
+      "id": "21",
+      "name": "Europa"
+    },
+    {
+      "id": "7",
+      "name": "Évora"
+    },
+    {
+      "id": "8",
+      "name": "Faro"
+    },
+    {
+      "id": "22",
+      "name": "Fora da Europa"
+    },
+    {
+      "id": "9",
+      "name": "Guarda"
+    },
+    {
+      "id": "10",
+      "name": "Leiria"
+    },
+    {
+      "id": "11",
+      "name": "Lisboa"
+    },
+    {
+      "id": "20",
+      "name": "Madeira"
+    },
+    {
+      "id": "12",
+      "name": "Portalegre"
+    },
+    {
+      "id": "13",
+      "name": "Porto"
+    },
+    {
+      "id": "14",
+      "name": "Santarém"
+    },
+    {
+      "id": "15",
+      "name": "Setúbal"
+    },
+    {
+      "id": "16",
+      "name": "Viana do Castelo"
+    },
+    {
+      "id": "17",
+      "name": "Vila Real"
+    },
+    {
+      "id": "18",
+      "name": "Viseu"
+    }
+  ],
+  "representatives": [
+    {
+      "id": "15856",
+      "name": "Adriana Rodrigues",
+      "constituencyId": "1",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7489"
+    },
+    {
+      "id": "16140",
+      "name": "Aida Carvalho",
+      "constituencyId": "9",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9194"
+    },
+    {
+      "id": "16907",
+      "name": "Alberto Fonseca",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=5993"
+    },
+    {
+      "id": "16897",
+      "name": "Alberto Machado",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6937"
+    },
+    {
+      "id": "16571",
+      "name": "Alexandre Poço",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7240"
+    },
+    {
+      "id": "16801",
+      "name": "Alfredo Maia",
+      "constituencyId": "13",
+      "party": "PCP",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=817"
+    },
+    {
+      "id": "15857",
+      "name": "Almiro Moreira",
+      "constituencyId": "1",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8152"
+    },
+    {
+      "id": "17159",
+      "name": "Amílcar Almeida",
+      "constituencyId": "17",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8157"
+    },
+    {
+      "id": "16523",
+      "name": "Ana Bernardo",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7913"
+    },
+    {
+      "id": "15971",
+      "name": "Ana Catarina Peixoto",
+      "constituencyId": "3",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9112"
+    },
+    {
+      "id": "16892",
+      "name": "Ana Gabriela Cabilhas",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8179"
+    },
+    {
+      "id": "16906",
+      "name": "Ana Isabel Ferreira",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9506"
+    },
+    {
+      "id": "15762",
+      "name": "Ana Martins",
+      "constituencyId": "19",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8196"
+    },
+    {
+      "id": "16049",
+      "name": "Ana Oliveira",
+      "constituencyId": "6",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4330"
+    },
+    {
+      "id": "17161",
+      "name": "Ana Silveira",
+      "constituencyId": "17",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9629"
+    },
+    {
+      "id": "17062",
+      "name": "André Pinotes Batista",
+      "constituencyId": "15",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6050"
+    },
+    {
+      "id": "16524",
+      "name": "André Rijo",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8230"
+    },
+    {
+      "id": "16252",
+      "name": "André Ventura",
+      "constituencyId": "11",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6535"
+    },
+    {
+      "id": "16898",
+      "name": "Andreia Neto",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4396"
+    },
+    {
+      "id": "16307",
+      "name": "Angélique Da Teresa",
+      "constituencyId": "11",
+      "party": "IL",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8246"
+    },
+    {
+      "id": "15873",
+      "name": "António Carneiro",
+      "constituencyId": "2",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8255"
+    },
+    {
+      "id": "17060",
+      "name": "António Mendonça Mendes",
+      "constituencyId": "15",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7888"
+    },
+    {
+      "id": "16578",
+      "name": "António Rodrigues",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=1132"
+    },
+    {
+      "id": "15791",
+      "name": "Armando Grave",
+      "constituencyId": "1",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8269"
+    },
+    {
+      "id": "17181",
+      "name": "Armando Mourisco",
+      "constituencyId": "18",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9641"
+    },
+    {
+      "id": "16115",
+      "name": "Bárbara do Amaral Correia",
+      "constituencyId": "8",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9184"
+    },
+    {
+      "id": "17169",
+      "name": "Bernardo Pessanha",
+      "constituencyId": "18",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8736"
+    },
+    {
+      "id": "17200",
+      "name": "Bruno Faria",
+      "constituencyId": "18",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9650"
+    },
+    {
+      "id": "16258",
+      "name": "Bruno Nunes",
+      "constituencyId": "11",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7338"
+    },
+    {
+      "id": "16574",
+      "name": "Bruno Ventura",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2304"
+    },
+    {
+      "id": "17086",
+      "name": "Bruno Vitorino",
+      "constituencyId": "15",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=1713"
+    },
+    {
+      "id": "16901",
+      "name": "Carla Barros",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4147"
+    },
+    {
+      "id": "16065",
+      "name": "Carlos Alberto Gonçalves",
+      "constituencyId": "21",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=1458"
+    },
+    {
+      "id": "15893",
+      "name": "Carlos Barbosa",
+      "constituencyId": "3",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7948"
+    },
+    {
+      "id": "15964",
+      "name": "Carlos Cação",
+      "constituencyId": "3",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7325"
+    },
+    {
+      "id": "16713",
+      "name": "Carlos Guimarães Pinto",
+      "constituencyId": "13",
+      "party": "IL",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7343"
+    },
+    {
+      "id": "17064",
+      "name": "Carlos Pereira",
+      "constituencyId": "15",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6187"
+    },
+    {
+      "id": "17196",
+      "name": "Carlos Silva Santiago",
+      "constituencyId": "18",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8783"
+    },
+    {
+      "id": "15859",
+      "name": "Carolina Marques",
+      "constituencyId": "1",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8788"
+    },
+    {
+      "id": "16165",
+      "name": "Catarina Louro",
+      "constituencyId": "10",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8165"
+    },
+    {
+      "id": "16931",
+      "name": "Catarina Salgueiro",
+      "constituencyId": "14",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7387"
+    },
+    {
+      "id": "16184",
+      "name": "Célia Freire",
+      "constituencyId": "10",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7928"
+    },
+    {
+      "id": "16973",
+      "name": "Cláudia Estêvão",
+      "constituencyId": "15",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8812"
+    },
+    {
+      "id": "16671",
+      "name": "Cristina Rodrigues",
+      "constituencyId": "13",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6547"
+    },
+    {
+      "id": "16154",
+      "name": "Cristina Vieira Henriques",
+      "constituencyId": "10",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7890"
+    },
+    {
+      "id": "16114",
+      "name": "Cristóvão Norte",
+      "constituencyId": "8",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2297"
+    },
+    {
+      "id": "16854",
+      "name": "Dália Miranda",
+      "constituencyId": "13",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9483"
+    },
+    {
+      "id": "16972",
+      "name": "Daniel Teixeira",
+      "constituencyId": "15",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8832"
+    },
+    {
+      "id": "16525",
+      "name": "Davide Amado",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=5852"
+    },
+    {
+      "id": "16670",
+      "name": "Diogo Pacheco de Amorim",
+      "constituencyId": "13",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6858"
+    },
+    {
+      "id": "16146",
+      "name": "Dulcineia Catarina Moura",
+      "constituencyId": "9",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8863"
+    },
+    {
+      "id": "16516",
+      "name": "Edite Estrela",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=162"
+    },
+    {
+      "id": "16853",
+      "name": "Eduardo Pinheiro",
+      "constituencyId": "13",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7460"
+    },
+    {
+      "id": "17108",
+      "name": "Eduardo Teixeira",
+      "constituencyId": "16",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2576"
+    },
+    {
+      "id": "16021",
+      "name": "Eliseu Neves",
+      "constituencyId": "6",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8465"
+    },
+    {
+      "id": "17180",
+      "name": "Elza Pais",
+      "constituencyId": "18",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4209"
+    },
+    {
+      "id": "16632",
+      "name": "Emanuel Câmara",
+      "constituencyId": "20",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9389"
+    },
+    {
+      "id": "15963",
+      "name": "Emídio Guerreiro",
+      "constituencyId": "3",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2114"
+    },
+    {
+      "id": "16164",
+      "name": "Eurico Brilhante Dias",
+      "constituencyId": "10",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=5600"
+    },
+    {
+      "id": "17061",
+      "name": "Eurídice Pereira",
+      "constituencyId": "15",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4186"
+    },
+    {
+      "id": "16581",
+      "name": "Eva Brás Pinho",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8476"
+    },
+    {
+      "id": "16521",
+      "name": "Eva Cruzeiro",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9332"
+    },
+    {
+      "id": "16195",
+      "name": "Fabian Figueiredo",
+      "constituencyId": "11",
+      "party": "BE",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7040"
+    },
+    {
+      "id": "16257",
+      "name": "Felicidade Vital",
+      "constituencyId": "11",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8017"
+    },
+    {
+      "id": "17160",
+      "name": "Fernando Queiroga",
+      "constituencyId": "17",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9628"
+    },
+    {
+      "id": "16759",
+      "name": "Filipa Pinto",
+      "constituencyId": "13",
+      "party": "L",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8491"
+    },
+    {
+      "id": "15890",
+      "name": "Filipe Melo",
+      "constituencyId": "3",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7332"
+    },
+    {
+      "id": "15833",
+      "name": "Filipe Neto Brandão",
+      "constituencyId": "1",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=1554"
+    },
+    {
+      "id": "16621",
+      "name": "Filipe Sousa",
+      "constituencyId": "20",
+      "party": "JPP",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9378"
+    },
+    {
+      "id": "15861",
+      "name": "Firmino Ferreira",
+      "constituencyId": "1",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9060"
+    },
+    {
+      "id": "15769",
+      "name": "Francisco César",
+      "constituencyId": "19",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7341"
+    },
+    {
+      "id": "16900",
+      "name": "Francisco Covelinhas Lopes",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2397"
+    },
+    {
+      "id": "16079",
+      "name": "Francisco Figueira",
+      "constituencyId": "7",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7359"
+    },
+    {
+      "id": "16611",
+      "name": "Francisco Gomes",
+      "constituencyId": "20",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4223"
+    },
+    {
+      "id": "16583",
+      "name": "Francisco José Martins",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=321"
+    },
+    {
+      "id": "15780",
+      "name": "Francisco Pimentel",
+      "constituencyId": "19",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7351"
+    },
+    {
+      "id": "16902",
+      "name": "Francisco Sousa Vieira",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7796"
+    },
+    {
+      "id": "16517",
+      "name": "Frederico Francisco",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9331"
+    },
+    {
+      "id": "16895",
+      "name": "Germana Rocha",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=5984"
+    },
+    {
+      "id": "16905",
+      "name": "Gonçalo Dinis Capitão",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=1478"
+    },
+    {
+      "id": "16580",
+      "name": "Gonçalo Lage",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8526"
+    },
+    {
+      "id": "15884",
+      "name": "Gonçalo Valente",
+      "constituencyId": "2",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8525"
+    },
+    {
+      "id": "15862",
+      "name": "Helga Correia",
+      "constituencyId": "1",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=5490"
+    },
+    {
+      "id": "15990",
+      "name": "Hernâni Dias",
+      "constituencyId": "4",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8546"
+    },
+    {
+      "id": "15943",
+      "name": "Hernâni Loureiro",
+      "constituencyId": "3",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=3939"
+    },
+    {
+      "id": "16899",
+      "name": "Hugo Carneiro",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7274"
+    },
+    {
+      "id": "16942",
+      "name": "Hugo Costa",
+      "constituencyId": "14",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6013"
+    },
+    {
+      "id": "15832",
+      "name": "Hugo Oliveira",
+      "constituencyId": "1",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=5509"
+    },
+    {
+      "id": "16180",
+      "name": "Hugo Patrício Oliveira",
+      "constituencyId": "10",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6857"
+    },
+    {
+      "id": "15960",
+      "name": "Hugo Soares",
+      "constituencyId": "3",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4300"
+    },
+    {
+      "id": "16855",
+      "name": "Humberto Brito",
+      "constituencyId": "13",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9484"
+    },
+    {
+      "id": "16677",
+      "name": "Idalina Durães",
+      "constituencyId": "13",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8551"
+    },
+    {
+      "id": "16959",
+      "name": "Inês Barroso",
+      "constituencyId": "14",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7388"
+    },
+    {
+      "id": "16408",
+      "name": "Inês de Sousa Real",
+      "constituencyId": "11",
+      "party": "PAN",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6864"
+    },
+    {
+      "id": "15942",
+      "name": "Irene Costa",
+      "constituencyId": "3",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7494"
+    },
+    {
+      "id": "16519",
+      "name": "Isabel Alves Moreira",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4452"
+    },
+    {
+      "id": "17198",
+      "name": "Isabel Fernandes",
+      "constituencyId": "18",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8558"
+    },
+    {
+      "id": "16359",
+      "name": "Isabel Mendes Lopes",
+      "constituencyId": "11",
+      "party": "L",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7356"
+    },
+    {
+      "id": "16957",
+      "name": "Isaura Morais",
+      "constituencyId": "14",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6544"
+    },
+    {
+      "id": "16991",
+      "name": "Joana Cordeiro",
+      "constituencyId": "15",
+      "party": "IL",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7339"
+    },
+    {
+      "id": "16852",
+      "name": "Joana Lima",
+      "constituencyId": "13",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2885"
+    },
+    {
+      "id": "16051",
+      "name": "Joana Seabra",
+      "constituencyId": "6",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9149"
+    },
+    {
+      "id": "16182",
+      "name": "João Antunes dos Santos",
+      "constituencyId": "10",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7317"
+    },
+    {
+      "id": "16654",
+      "name": "João Lopes Aleixo",
+      "constituencyId": "12",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7589"
+    },
+    {
+      "id": "16086",
+      "name": "João Paulo Graça",
+      "constituencyId": "8",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7358"
+    },
+    {
+      "id": "16575",
+      "name": "João Pedro Louro",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7408"
+    },
+    {
+      "id": "16664",
+      "name": "João Pinho de Almeida",
+      "constituencyId": "13",
+      "party": "CDS-PP",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=1657"
+    },
+    {
+      "id": "15996",
+      "name": "João Ribeiro",
+      "constituencyId": "5",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8591"
+    },
+    {
+      "id": "17168",
+      "name": "João Tilly",
+      "constituencyId": "18",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8596"
+    },
+    {
+      "id": "16848",
+      "name": "João Torres",
+      "constituencyId": "13",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4405"
+    },
+    {
+      "id": "15966",
+      "name": "Joaquim Barbosa",
+      "constituencyId": "3",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8425"
+    },
+    {
+      "id": "16068",
+      "name": "Jorge Galveias",
+      "constituencyId": "7",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7330"
+    },
+    {
+      "id": "16308",
+      "name": "Jorge Miguel Teixeira",
+      "constituencyId": "11",
+      "party": "IL",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8343"
+    },
+    {
+      "id": "16758",
+      "name": "Jorge Pinto",
+      "constituencyId": "13",
+      "party": "L",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8869"
+    },
+    {
+      "id": "16259",
+      "name": "José Barreira Soares",
+      "constituencyId": "11",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7723"
+    },
+    {
+      "id": "16856",
+      "name": "José Carlos Barbosa",
+      "constituencyId": "13",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6731"
+    },
+    {
+      "id": "16672",
+      "name": "José Carvalho",
+      "constituencyId": "13",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8353"
+    },
+    {
+      "id": "16131",
+      "name": "José Cesário",
+      "constituencyId": "22",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=77"
+    },
+    {
+      "id": "16060",
+      "name": "José Dias Fernandes",
+      "constituencyId": "21",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8359"
+    },
+    {
+      "id": "16930",
+      "name": "José Dotti",
+      "constituencyId": "14",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7396"
+    },
+    {
+      "id": "17132",
+      "name": "José Lago Gonçalves",
+      "constituencyId": "16",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7406"
+    },
+    {
+      "id": "15938",
+      "name": "José Luís Carneiro",
+      "constituencyId": "3",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2105"
+    },
+    {
+      "id": "17128",
+      "name": "José Pedro Aguiar-Branco",
+      "constituencyId": "16",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2061"
+    },
+    {
+      "id": "15984",
+      "name": "Júlia Rodrigues",
+      "constituencyId": "4",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4551"
+    },
+    {
+      "id": "16014",
+      "name": "Leonor Cipriano",
+      "constituencyId": "5",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=5595"
+    },
+    {
+      "id": "16586",
+      "name": "Liliana Fidalgo",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7667"
+    },
+    {
+      "id": "16185",
+      "name": "Liliana Sousa",
+      "constituencyId": "10",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7039"
+    },
+    {
+      "id": "15894",
+      "name": "Lina Pinheiro",
+      "constituencyId": "3",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9073"
+    },
+    {
+      "id": "16073",
+      "name": "Luís Dias",
+      "constituencyId": "7",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8396"
+    },
+    {
+      "id": "16101",
+      "name": "Luís Graça",
+      "constituencyId": "8",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=5677"
+    },
+    {
+      "id": "16658",
+      "name": "Luís Moreira Testa",
+      "constituencyId": "12",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4126"
+    },
+    {
+      "id": "16153",
+      "name": "Luís Paulo Fernandes",
+      "constituencyId": "10",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7353"
+    },
+    {
+      "id": "16261",
+      "name": "Madalena Cordeiro",
+      "constituencyId": "11",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8418"
+    },
+    {
+      "id": "16127",
+      "name": "Manuel Magno",
+      "constituencyId": "22",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7347"
+    },
+    {
+      "id": "17130",
+      "name": "Manuela Carvalho",
+      "constituencyId": "16",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9617"
+    },
+    {
+      "id": "17138",
+      "name": "Manuela Tender",
+      "constituencyId": "17",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4365"
+    },
+    {
+      "id": "16577",
+      "name": "Marco Claudino",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4484"
+    },
+    {
+      "id": "16941",
+      "name": "Marcos Perestrello",
+      "constituencyId": "14",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2209"
+    },
+    {
+      "id": "16673",
+      "name": "Marcus Santos",
+      "constituencyId": "13",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7965"
+    },
+    {
+      "id": "17063",
+      "name": "Margarida Afonso",
+      "constituencyId": "15",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9577"
+    },
+    {
+      "id": "16576",
+      "name": "Margarida Saavedra",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4090"
+    },
+    {
+      "id": "15790",
+      "name": "Maria José Aguiar",
+      "constituencyId": "1",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8613"
+    },
+    {
+      "id": "16305",
+      "name": "Mariana Leitão",
+      "constituencyId": "11",
+      "party": "IL",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7973"
+    },
+    {
+      "id": "16514",
+      "name": "Mariana Vieira da Silva",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6934"
+    },
+    {
+      "id": "17118",
+      "name": "Marina Gonçalves",
+      "constituencyId": "16",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6870"
+    },
+    {
+      "id": "15810",
+      "name": "Mário Amorim Lopes",
+      "constituencyId": "1",
+      "party": "IL",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8636"
+    },
+    {
+      "id": "16254",
+      "name": "Marta Martins da Silva",
+      "constituencyId": "11",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7385"
+    },
+    {
+      "id": "16050",
+      "name": "Martim Syder",
+      "constituencyId": "6",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8650"
+    },
+    {
+      "id": "16047",
+      "name": "Maurício Marques",
+      "constituencyId": "6",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4328"
+    },
+    {
+      "id": "16515",
+      "name": "Miguel Cabrita",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=5841"
+    },
+    {
+      "id": "16893",
+      "name": "Miguel Guimarães",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8374"
+    },
+    {
+      "id": "16522",
+      "name": "Miguel Matos",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6706"
+    },
+    {
+      "id": "16714",
+      "name": "Miguel Rangel",
+      "constituencyId": "13",
+      "party": "IL",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9428"
+    },
+    {
+      "id": "16116",
+      "name": "Miguel Santos",
+      "constituencyId": "8",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2071"
+    },
+    {
+      "id": "15781",
+      "name": "Nuna Menezes",
+      "constituencyId": "19",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9020"
+    },
+    {
+      "id": "16004",
+      "name": "Nuno Fazenda",
+      "constituencyId": "5",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6878"
+    },
+    {
+      "id": "16971",
+      "name": "Nuno Gabriel",
+      "constituencyId": "15",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8693"
+    },
+    {
+      "id": "15991",
+      "name": "Nuno Jorge Gonçalves",
+      "constituencyId": "4",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8689"
+    },
+    {
+      "id": "16135",
+      "name": "Nuno Simões de Melo",
+      "constituencyId": "9",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8778"
+    },
+    {
+      "id": "16904",
+      "name": "Olga Freire",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8698"
+    },
+    {
+      "id": "16260",
+      "name": "Patrícia Almeida",
+      "constituencyId": "11",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7971"
+    },
+    {
+      "id": "16970",
+      "name": "Patrícia Carvalho",
+      "constituencyId": "15",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7355"
+    },
+    {
+      "id": "16850",
+      "name": "Patrícia Faro",
+      "constituencyId": "13",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6371"
+    },
+    {
+      "id": "16360",
+      "name": "Patrícia Gonçalves",
+      "constituencyId": "11",
+      "party": "L",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6968"
+    },
+    {
+      "id": "16675",
+      "name": "Patrícia Nascimento",
+      "constituencyId": "13",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9409"
+    },
+    {
+      "id": "15853",
+      "name": "Paula Cardoso",
+      "constituencyId": "1",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=3918"
+    },
+    {
+      "id": "17036",
+      "name": "Paula Santos",
+      "constituencyId": "15",
+      "party": "PCP",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4197"
+    },
+    {
+      "id": "15858",
+      "name": "Paulo Cavaleiro",
+      "constituencyId": "1",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2641"
+    },
+    {
+      "id": "17089",
+      "name": "Paulo Edson Cunha",
+      "constituencyId": "15",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7504"
+    },
+    {
+      "id": "16582",
+      "name": "Paulo Lopes Marcelo",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9357"
+    },
+    {
+      "id": "15941",
+      "name": "Paulo Lopes Silva",
+      "constituencyId": "3",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9097"
+    },
+    {
+      "id": "15779",
+      "name": "Paulo Moniz",
+      "constituencyId": "19",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6537"
+    },
+    {
+      "id": "17015",
+      "name": "Paulo Muacho",
+      "constituencyId": "15",
+      "party": "L",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6932"
+    },
+    {
+      "id": "16645",
+      "name": "Paulo Neves",
+      "constituencyId": "20",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6178"
+    },
+    {
+      "id": "16245",
+      "name": "Paulo Núncio",
+      "constituencyId": "11",
+      "party": "CDS-PP",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8723"
+    },
+    {
+      "id": "16461",
+      "name": "Paulo Raimundo",
+      "constituencyId": "11",
+      "party": "PCP",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8719"
+    },
+    {
+      "id": "16020",
+      "name": "Paulo Seco",
+      "constituencyId": "6",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8730"
+    },
+    {
+      "id": "17194",
+      "name": "Pedro Alves",
+      "constituencyId": "18",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=1738"
+    },
+    {
+      "id": "16643",
+      "name": "Pedro Coelho",
+      "constituencyId": "20",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8879"
+    },
+    {
+      "id": "16034",
+      "name": "Pedro Coimbra",
+      "constituencyId": "6",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=1893"
+    },
+    {
+      "id": "16929",
+      "name": "Pedro Correia",
+      "constituencyId": "14",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7346"
+    },
+    {
+      "id": "16032",
+      "name": "Pedro Delgado Alves",
+      "constituencyId": "6",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4453"
+    },
+    {
+      "id": "15878",
+      "name": "Pedro do Carmo",
+      "constituencyId": "2",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=416"
+    },
+    {
+      "id": "15789",
+      "name": "Pedro dos Santos Frazão",
+      "constituencyId": "1",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7345"
+    },
+    {
+      "id": "15830",
+      "name": "Pedro Nuno Santos",
+      "constituencyId": "1",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2051"
+    },
+    {
+      "id": "16255",
+      "name": "Pedro Pessanha",
+      "constituencyId": "11",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7391"
+    },
+    {
+      "id": "16085",
+      "name": "Pedro Pinto",
+      "constituencyId": "8",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7336"
+    },
+    {
+      "id": "17088",
+      "name": "Pedro Roque",
+      "constituencyId": "15",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=1992"
+    },
+    {
+      "id": "16587",
+      "name": "Pedro Soares Pimenta",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9358"
+    },
+    {
+      "id": "15792",
+      "name": "Pedro Tavares",
+      "constituencyId": "1",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8898"
+    },
+    {
+      "id": "16518",
+      "name": "Pedro Vaz",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8888"
+    },
+    {
+      "id": "16851",
+      "name": "Porfírio Silva",
+      "constituencyId": "13",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=469"
+    },
+    {
+      "id": "16676",
+      "name": "Raul Melo",
+      "constituencyId": "13",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9007"
+    },
+    {
+      "id": "16568",
+      "name": "Regina Bastos",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2106"
+    },
+    {
+      "id": "16013",
+      "name": "Ricardo Aires",
+      "constituencyId": "5",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8921"
+    },
+    {
+      "id": "15967",
+      "name": "Ricardo Barroso",
+      "constituencyId": "3",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9108"
+    },
+    {
+      "id": "16960",
+      "name": "Ricardo Carlos",
+      "constituencyId": "14",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7586"
+    },
+    {
+      "id": "16183",
+      "name": "Ricardo Carvalho",
+      "constituencyId": "10",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8916"
+    },
+    {
+      "id": "16256",
+      "name": "Ricardo Dias Pinto",
+      "constituencyId": "11",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8918"
+    },
+    {
+      "id": "16520",
+      "name": "Ricardo Lima",
+      "constituencyId": "11",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7731"
+    },
+    {
+      "id": "16974",
+      "name": "Ricardo Lopes Reis",
+      "constituencyId": "15",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9543"
+    },
+    {
+      "id": "16088",
+      "name": "Ricardo Moreira",
+      "constituencyId": "8",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7883"
+    },
+    {
+      "id": "16958",
+      "name": "Ricardo Oliveira",
+      "constituencyId": "14",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7205"
+    },
+    {
+      "id": "16969",
+      "name": "Rita Matias",
+      "constituencyId": "15",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7390"
+    },
+    {
+      "id": "15891",
+      "name": "Rodrigo Alves Taxa",
+      "constituencyId": "3",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7363"
+    },
+    {
+      "id": "16306",
+      "name": "Rodrigo Saraiva",
+      "constituencyId": "11",
+      "party": "IL",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6945"
+    },
+    {
+      "id": "16033",
+      "name": "Rosa Isabel Cruz",
+      "constituencyId": "6",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=5610"
+    },
+    {
+      "id": "16669",
+      "name": "Rui Afonso",
+      "constituencyId": "13",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7344"
+    },
+    {
+      "id": "16262",
+      "name": "Rui Cardoso",
+      "constituencyId": "11",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8951"
+    },
+    {
+      "id": "16155",
+      "name": "Rui Fernandes",
+      "constituencyId": "10",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8946"
+    },
+    {
+      "id": "17148",
+      "name": "Rui Jorge Santos",
+      "constituencyId": "17",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=1517"
+    },
+    {
+      "id": "16253",
+      "name": "Rui Paulo Sousa",
+      "constituencyId": "11",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7342"
+    },
+    {
+      "id": "15914",
+      "name": "Rui Rocha",
+      "constituencyId": "3",
+      "party": "IL",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7331"
+    },
+    {
+      "id": "16903",
+      "name": "Rui Rocha Pereira",
+      "constituencyId": "13",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9505"
+    },
+    {
+      "id": "16358",
+      "name": "Rui Tavares",
+      "constituencyId": "11",
+      "party": "L",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7337"
+    },
+    {
+      "id": "15939",
+      "name": "Sandra Lopes",
+      "constituencyId": "3",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8962"
+    },
+    {
+      "id": "16570",
+      "name": "Sandra Pereira",
+      "constituencyId": "11",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=5749"
+    },
+    {
+      "id": "16087",
+      "name": "Sandra Ribeiro",
+      "constituencyId": "8",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7373"
+    },
+    {
+      "id": "16857",
+      "name": "Sofia Andrade",
+      "constituencyId": "13",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6710"
+    },
+    {
+      "id": "15962",
+      "name": "Sofia Machado Fernandes",
+      "constituencyId": "3",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9107"
+    },
+    {
+      "id": "16847",
+      "name": "Sofia Pereira",
+      "constituencyId": "13",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8982"
+    },
+    {
+      "id": "17087",
+      "name": "Sonia dos Reis",
+      "constituencyId": "15",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6081"
+    },
+    {
+      "id": "15968",
+      "name": "Sónia Margarida Fernandes",
+      "constituencyId": "3",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9109"
+    },
+    {
+      "id": "16674",
+      "name": "Sónia Monteiro",
+      "constituencyId": "13",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=8091"
+    },
+    {
+      "id": "15831",
+      "name": "Susana Correia",
+      "constituencyId": "1",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=6962"
+    },
+    {
+      "id": "17084",
+      "name": "Teresa Morais",
+      "constituencyId": "15",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=1897"
+    },
+    {
+      "id": "16849",
+      "name": "Tiago Barbosa Ribeiro",
+      "constituencyId": "13",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=2445"
+    },
+    {
+      "id": "15892",
+      "name": "Vanessa Barata",
+      "constituencyId": "3",
+      "party": "CH",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=7369"
+    },
+    {
+      "id": "16644",
+      "name": "Vânia Jesus",
+      "constituencyId": "20",
+      "party": "PSD",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=4221"
+    },
+    {
+      "id": "16103",
+      "name": "Vítor Guerreiro",
+      "constituencyId": "8",
+      "party": "PS",
+      "profileUrl": "https://www.parlamento.pt/DeputadoGP/Paginas/Biografia.aspx?BID=9174"
+    }
+  ]
+}

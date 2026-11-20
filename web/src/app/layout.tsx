@@ -1,108 +1,70 @@
-import type { Metadata, Viewport } from "next";
-import { Courier_Prime, Source_Sans_3, Caveat } from "next/font/google";
-import { AnalyticsWrapper } from "@/components/AnalyticsWrapper";
-import { LocaleProvider } from "@/components/i18n/LocaleProvider";
-import { APP_URL, FOUNDER_HOMEPAGE, FOUNDER_LINKEDIN } from "@/lib/config";
+import type { Metadata } from "next";
+import Link from "next/link";
+import Brand from "@/components/Brand";
+import { APP_NAME, APP_URL } from "@/lib/config";
 import "./globals.css";
-
-const courierPrime = Courier_Prime({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-courier-prime",
-});
-
-const sourceSans = Source_Sans_3({
-  subsets: ["latin"],
-  variable: "--font-source-sans",
-});
-
-const caveat = Caveat({
-  subsets: ["latin"],
-  variable: "--font-caveat",
-});
-
-const brandJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${APP_URL}/#organization`,
-      name: "Brief-nach-Berlin",
-      url: APP_URL,
-      logo: {
-        "@type": "ImageObject",
-        url: `${APP_URL}/apple-icon.png`,
-        width: 180,
-        height: 180,
-      },
-      image: `${APP_URL}/opengraph-image.jpg`,
-      description:
-        "Brief-nach-Berlin hilft Bürgerinnen und Bürgern, in wenigen Minuten einen persönlichen Brief an ihre Bundestagsabgeordneten zu formulieren.",
-      sameAs: ["https://github.com/tholo91/brief-nach-berlin"],
-      founder: { "@id": `${APP_URL}/#founder` },
-    },
-    {
-      "@type": "Person",
-      "@id": `${APP_URL}/#founder`,
-      name: "Thomas Lorenz",
-      url: FOUNDER_HOMEPAGE,
-      sameAs: [FOUNDER_HOMEPAGE, FOUNDER_LINKEDIN],
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${APP_URL}/#website`,
-      name: "Brief-nach-Berlin",
-      url: APP_URL,
-      publisher: { "@id": `${APP_URL}/#organization` },
-      inLanguage: "de-DE",
-    },
-  ],
-};
-
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
-  title: "Brief-nach-Berlin | Dein Anliegen an die Politik, in drei Minuten",
+  title: {
+    default: `${APP_NAME} — A tua voz, por escrito.`,
+    template: `%s | ${APP_NAME}`,
+  },
   description:
-    "Was stört dich? Brief-nach-Berlin findet die zuständigen Abgeordneten und formuliert deinen Brief, der wirklich ankommt. ✉️",
+    "Transforma uma preocupação numa carta pessoal a um deputado da Assembleia da República. Escolhe, escreve, revê e envia tu mesmo.",
+  robots: { index: false, follow: false }, // Test contact: keep previews out of search until the operator is identified.
   openGraph: {
-    title: "Brief-nach-Berlin | Dein Anliegen an die Politik, in drei Minuten",
-    description:
-      "Was stört dich? Brief-nach-Berlin findet die zuständigen Abgeordneten und formuliert deinen Brief, der wirklich ankommt. ✉️",
+    title: APP_NAME,
+    description: "A tua voz, por escrito.",
+    locale: "pt_PT",
     type: "website",
-    locale: "de_DE",
-    url: APP_URL,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Brief-nach-Berlin | Dein Anliegen an die Politik, in drei Minuten",
-    description:
-      "Was stört dich? Brief-nach-Berlin findet die zuständigen Abgeordneten und formuliert deinen Brief, der wirklich ankommt. ✉️",
   },
 };
-
-export const viewport: Viewport = {
-  themeColor: "#FAF8F5",
-};
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="de"
-      className={`${courierPrime.variable} ${sourceSans.variable} ${caveat.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(brandJsonLd) }}
-        />
-        <LocaleProvider>
-          {children}
-          <AnalyticsWrapper />
-        </LocaleProvider>
+    <html lang="pt-PT">
+      <body>
+        <a className="skip-link" href="#conteudo">
+          Saltar para o conteúdo
+        </a>
+        <header className="site-header">
+          <Brand />
+          <nav aria-label="Navegação principal">
+            <Link href="/sobre">Como funciona</Link>
+            <Link className="nav-cta" href="/escrever">
+              Escrever uma carta
+            </Link>
+          </nav>
+        </header>
+        {children}
+        <footer className="site-footer">
+          <div>
+            <Brand />
+            <p>
+              Uma iniciativa independente.
+              <br />A democracia também se escreve.
+            </p>
+          </div>
+          <div className="footer-links">
+            <Link href="/sobre">Sobre e fontes</Link>
+            <Link href="/privacidade">Privacidade</Link>
+            <a href="https://github.com/pedrobh-code/brief-nach-berlin-portugal">
+              Código aberto
+            </a>
+          </div>
+          <p className="footer-note">
+            Adaptado de{" "}
+            <a href="https://github.com/tholo91/brief-nach-berlin">
+              Brief-nach-Berlin
+            </a>
+            , de Thomas Lorenz.
+            <br />
+            Não representa a Assembleia da República. Versão de teste.
+          </p>
+        </footer>
       </body>
     </html>
   );
