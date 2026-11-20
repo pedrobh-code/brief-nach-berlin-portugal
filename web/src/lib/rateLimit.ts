@@ -7,7 +7,7 @@
 // - Good enough to stop trivial/accidental abuse and honest repeated clicks.
 // - Replace with @vercel/kv or Upstash when traffic warrants.
 
-import { createHash } from "node:crypto";
+import { createHash, randomBytes } from "node:crypto";
 
 type Bucket = { count: number; resetAt: number };
 const buckets = new Map<string, Bucket>();
@@ -16,7 +16,7 @@ const buckets = new Map<string, Bucket>();
 // Falls back to a per-process random string if no env var is set, which is
 // fine because buckets are per-instance anyway.
 const RATE_LIMIT_SALT =
-  process.env.RATE_LIMIT_SALT ?? `bnb-${Math.random().toString(36).slice(2)}`;
+  process.env.RATE_LIMIT_SALT ?? randomBytes(32).toString("hex");
 
 // Truncated SHA-256 (16 hex chars = 64 bits) is plenty to keep buckets distinct
 // for an in-memory limiter and short enough to keep log lines readable.
@@ -47,7 +47,7 @@ export interface RateLimitResult {
 export function checkRateLimit(
   key: string,
   max: number,
-  windowMs: number
+  windowMs: number,
 ): RateLimitResult {
   const now = Date.now();
   maybePrune(now);
@@ -65,96 +65,4 @@ export function checkRateLimit(
   }
   bucket.count++;
   return { allowed: true, remaining: max - bucket.count };
-}
-
-// Common limits used across the app.
-export const LIMITS = {
-  // Paid Mistral classification starts before the final letter submission.
-  // Keep this independent from the letter bucket so aborted wizard sessions
-  // cannot create unbounded model spend.
-  ROUTING_PREFETCH_PER_IP: { max: 10, windowMs: 60 * 60_000 },
-  // Klassenlink: eine Klasse sitzt hinter einer Schul-IP und bekommt ihren
-  // eigenen Bucket statt des IP-Limits. Vorprüfung (submitWizardAction) und
-  // Generierung (/api/generate-letter) teilen den Bucket wie beim IP-Limit,
-  // ein Brief zählt bis zu zweimal: 80 ist also etwa 40 Briefe pro Stunde und Klassenlink.
-  // Jeder Klassenlink öffnet einen eigenen Briefbucket, darum wird das Erstellen pro IP begrenzt.
-  CLASS_LINKS_PER_IP: { max: 10, windowMs: 60 * 60_000 },
-  LETTERS_PER_CLASS: { max: 80, windowMs: 60 * 60_000 },
-  ROUTING_PREFETCH_PER_CLASS: { max: 60, windowMs: 60 * 60_000 },
-  // Per email: 3 letters per 24 hours. Humans don't legitimately write more
-  // than a handful; scripts hammering the same address hit this fast.
-  LETTERS_PER_EMAIL: { max: 3, windowMs: 24 * 60 * 60_000 },
-  // Per IP: 10 letter generations per hour. Covers shared households/offices
-  // behind NAT while stopping scripted abuse from a single origin.
-  LETTERS_PER_IP: { max: 10, windowMs: 60 * 60_000 },
-  LETTER_SIGNALS_PER_IP: { max: 20, windowMs: 60 * 60_000 },
-  LETTER_SIGNALS_PER_EMAIL: { max: 10, windowMs: 24 * 60 * 60_000 },
-  // Per IP: 30 transcription calls per hour. Voxtral is more expensive; users
-  // typically record once or twice per session.
-  TRANSCRIBE_PER_IP: { max: 30, windowMs: 60 * 60_000 },
-  // Klassenlink: eine Klasse hinter einer Schul-IP nimmt per Sprache auf, 90 pro Stunde und Klassenlink.
-  TRANSCRIBE_PER_CLASS: { max: 90, windowMs: 60 * 60_000 },
-  // Resend per IP: 3 retries per hour. Real users need 1-2 if they typo'd
-  // their email or it landed in spam; more is almost always abuse.
-  RESEND_PER_IP: { max: 3, windowMs: 60 * 60_000 },
-  // Resend per email: 2 retries per hour. Anyone targeting one address
-  // hits this even faster.
-  RESEND_PER_EMAIL: { max: 2, windowMs: 60 * 60_000 },
-  // Letter variants: separate from the normal letter flow so adjustments do
-  // not consume first-letter buckets, but still protect the paid LLM/email path.
-  LETTER_VARIANTS_PER_IP: { max: 15, windowMs: 60 * 60_000 },
-  LETTER_VARIANTS_PER_EMAIL: { max: 5, windowMs: 24 * 60 * 60_000 },
-  // Reviews per IP: 1 per 10 minutes. Real users rate a given letter once;
-  // anything more is noise or abuse.
-  REVIEW_PER_IP: { max: 1, windowMs: 10 * 60_000 },
-  // Error reports per IP: 5 per 10 minutes. A user clicking "Fehler melden" a
-  // few times during one broken session is legitimate; more is noise.
-  REPORT_ERROR_PER_IP: { max: 5, windowMs: 10 * 60_000 },
-  // Campaign reports per IP: 3 per hour. Each report mails a real creator.
-  REPORT_CAMPAIGN_PER_IP: { max: 3, windowMs: 60 * 60_000 },
-  // Campaign drafts: 5 per hour, applied to both the IP and the email bucket.
-  // Each draft uploads a logo, runs paid moderation and mails a real address.
-  CAMPAIGN_DRAFTS: { max: 5, windowMs: 60 * 60_000 },
-  // Data deletion per IP: 10 per hour. A reader may retry after an error or
-  // open the link on a shared connection; scripted probing stops here.
-  DATA_DELETION_PER_IP: { max: 10, windowMs: 60 * 60_000 },
-  // Data deletion per email: 3 per 24 hours. One click deletes everything,
-  // so a handful of retries is plenty.
-  DATA_DELETION_PER_EMAIL: { max: 3, windowMs: 24 * 60 * 60_000 },
-  // Manage-link requests per IP: 5 per hour. Each request mails a real creator;
-  // scripted probing stops here.
-  MANAGE_LINK_PER_IP: { max: 5, windowMs: 60 * 60_000 },
-  // Manage-link requests per email: 2 per hour. One lost link needs one retry
-  // at most; anyone targeting a single inbox hits this fast.
-  MANAGE_LINK_PER_EMAIL: { max: 2, windowMs: 60 * 60_000 },
-} as const;
-
-// Herkunfts-Limit für Brief und Routing-Vorabprüfung: Klassen-Bucket, wenn ein
-// gültiger Klassenlink vorliegt, sonst der IP-Bucket. Eine Stelle für alle Aufrufer.
-export function checkOriginRateLimit(
-  kind: "letter" | "routing-prefetch" | "transcribe",
-  ipHash: string,
-  classBucketId?: string | null
-): RateLimitResult {
-  const limits =
-    kind === "letter"
-      ? { ip: LIMITS.LETTERS_PER_IP, cls: LIMITS.LETTERS_PER_CLASS }
-      : kind === "transcribe"
-        ? { ip: LIMITS.TRANSCRIBE_PER_IP, cls: LIMITS.TRANSCRIBE_PER_CLASS }
-        : { ip: LIMITS.ROUTING_PREFETCH_PER_IP, cls: LIMITS.ROUTING_PREFETCH_PER_CLASS };
-  if (classBucketId) {
-    return checkRateLimit(`${kind}:class:${classBucketId}`, limits.cls.max, limits.cls.windowMs);
-  }
-  return checkRateLimit(`${kind}:ip:${ipHash}`, limits.ip.max, limits.ip.windowMs);
-}
-
-export async function getClientIp(): Promise<string> {
-  // Runtime-dynamic import so this module stays usable from non-request code.
-  const { headers } = await import("next/headers");
-  const h = await headers();
-  const forwarded = h.get("x-forwarded-for");
-  if (forwarded) return forwarded.split(",")[0]!.trim();
-  const real = h.get("x-real-ip");
-  if (real) return real.trim();
-  return "unknown";
 }

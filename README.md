@@ -1,89 +1,80 @@
-# Brief-nach-Berlin
+# Carta à Assembleia
 
-> Deine Meinung. Handschriftlich. An die Richtigen.
+European Portuguese adaptation of [Brief-nach-Berlin](https://github.com/tholo91/brief-nach-berlin), by Thomas Lorenz. A citizen describes a concern, chooses a current member of Portugal's Assembleia da República, reviews an AI-assisted draft, and sends their own letter. No accounts, automatic political dispatch, analytics, campaigns or letter database.
 
-[![Live ausprobieren](https://img.shields.io/badge/live-brief--nach--berlin.de-1f6feb?labelColor=24292f)](https://brief-nach-berlin.de)
-[![MIT License](https://img.shields.io/badge/license-MIT-1f6feb?labelColor=24292f)](LICENSE)
+## Run locally
 
-Brief-nach-Berlin hilft Menschen, aus einem politischen Anliegen einen persönlichen Brief an die zuständige politische Vertretung zu machen. Anliegen beschreiben, Zuständigkeit prüfen, Entwurf anpassen, abschreiben und selbst abschicken.
+Node 22 and npm are required.
 
-[Live-App öffnen](https://brief-nach-berlin.de) · [Anpassung für andere Länder](ADAPT_TO_YOUR_COUNTRY.md) · [Issues und Ideen](https://github.com/tholo91/brief-nach-berlin/issues)
-
-![Illustration einer handschriftlichen Postkarte auf dem Weg zu einem Briefkasten vor der Berliner Stadtsilhouette](web/src/app/opengraph-image.jpg)
-
-## Für Nutzer:innen
-
-1. Anliegen als Text oder Sprachnachricht beschreiben
-2. PLZ eingeben
-3. Zuständige politische Ebene und Vertretung prüfen
-4. Einen persönlichen Briefentwurf erhalten
-5. Anpassen, von Hand abschreiben und per Post abschicken
-
-Die KI nimmt niemandem die eigene Meinung ab. Sie erleichtert Recherche und Formulierung. Ob der Brief passt und ob er abgeschickt wird, entscheidet die Person selbst. Brief-nach-Berlin ist keine Petition, kein automatisierter Massenversand und kein politischer Autopilot.
-
-Warum handschriftlich? Weil der Brief dadurch nicht bei der Formulierung endet: Du liest ihn, passt ihn an, schreibst ihn selbst ab und schickst ihn ab. Diese menschliche Handlung ist der Punkt.
-
-## Datenschutz und Datenfluss
-
-- Kein Nutzerkonto und keine persönliche Brief-Historie
-- Persönliche Anliegen und Briefentwürfe werden nicht als allgemeine Nutzerhistorie gespeichert
-- Supabase wird für klar abgegrenzte Funktionen wie aggregierte Statistik, freiwilliges Feedback, Themensignale und öffentliche Kampagnen genutzt
-- KI unterstützt Entwurf, Moderation und Transkription; der persönliche Text wird nicht als öffentlicher Prompt- oder Log-Dump geführt
-
-Details stehen in der [Datenschutzerklärung](https://brief-nach-berlin.de/datenschutz), im [DSGVO-Audit](DSGVO-AUDIT.md) und im [Technik- und Datenschutz-Spicker](TECHNIK-SPICKER.md).
-
-## Für Entwickler:innen
-
-### Voraussetzungen
-
-- Node.js und npm
-- API-Schlüssel für die Funktionen, die lokal getestet werden sollen
-
-### Lokal starten
-
-```bash
+```sh
 cd web
 npm ci
 cp .env.example .env.local
+# Set your own OPENROUTER_API_KEY in .env.local, never in source.
 npm run dev
 ```
 
-Danach ist die lokale App unter [http://localhost:3000](http://localhost:3000) erreichbar. Für einen vollständigen Brief-Flow müssen die benötigten Werte in `web/.env.local` gesetzt werden. Die Vorlage dokumentiert auch die relevanten Datenschutz- und Feature-Flag-Hinweise.
+Open http://localhost:3000. Without a key the complete interface and official representative lookup work; generation returns an honest unavailable message. Tests mock the AI and email providers and never send letters or paid model requests.
 
-Weitere technische Hinweise stehen in [`web/README.md`](web/README.md). Für Prüfungen sind unter anderem `npm run lint`, `npm test` und `npm run build` verfügbar.
+```sh
+cd web
+npm test
+npm run typecheck
+npm run lint
+npm run build
+# With the app serving on localhost:3000 and Chromium installed:
+npm run test:e2e
+```
 
-## Technik und Datenquellen
+## Scope and provenance
 
-- **Next.js, React und TypeScript** für Oberfläche und Serverlogik
-- **Vercel** für Hosting und serverseitige Funktionen
-- **Mistral AI / Voxtral** für Briefentwurf, Moderation und Sprachtranskription
-- **Supabase** für abgegrenzte Statistik-, Feedback- und Kampagnenfunktionen
-- **Brevo** für den optionalen E-Mail-Versand des eigenen Briefs
-- **Bundeswahlleiterin** für das PLZ-Wahlkreis-Mapping
-- **Abgeordnetenwatch API** für Politiker-Daten
+The national-only scope follows upstream `international-starter` (`cce073a0a429fdcbaff834b76cbedf6ee6573b0f`). The fork retains its existing history rather than resetting it to that older commit. The deployed `web/` app replaces German routes, data, campaign/database integrations and assets with the Portuguese MVP. The current Next.js/React baseline and later anti-fabrication safeguards are retained. Historical German documentation elsewhere in this repository describes upstream, not this deployment.
 
-Die fachlich kritische Zuständigkeits-, Wahlkreis- und Datenlogik wird lokal gepflegt und muss bei einer Länderanpassung durch verlässliche Quellen und Regeln des jeweiligen Landes ersetzt werden.
+Public UI, prompts, output, email template and error messages use pt-PT. Selection is by constituency, including Açores, Madeira, Europa and Fora da Europa; it does not infer a constituency from a postal code or recommend a party. Recipients and postal addresses are validated on the server, never supplied by the model.
 
-## Open Source und Anpassung
+## Official representative data
 
-Der Quellcode steht unter der [MIT-Lizenz](LICENSE). Du darfst ihn für eigene Projekte verwenden, anpassen und weiterveröffentlichen, solange Copyright- und Lizenzhinweis erhalten bleiben.
+`web/scripts/import-parliament.ts` discovers the latest legislature's JSON resource on [Parliament's official open-data page](https://www.parlamento.pt/Cidadania/Paginas/DAInformacaoBase.aspx). It filters current mandates, resolves parliamentary group membership at the source export date, validates 22 constituencies / 230 unique current members, then atomically replaces the snapshot. Those counts are deliberate anomaly gates: review them when electoral rules or the schema change.
 
-Die deutsche Zuständigkeitslogik, die Marke Brief-nach-Berlin, Logos, Bilder, redaktionelle Inhalte und externe Datenquellen können eigenen Rechten oder Lizenzen unterliegen. Eine Länderanpassung ist daher mehr als eine Übersetzung: Zuständigkeiten, Datenquellen, Sprache, politische Ebenen und Datenschutz müssen vor Ort neu geprüft werden.
+```sh
+cd web
+npm run data:refresh
+npm test
+```
 
-Der beste Einstieg dafür ist der [Guide zur Anpassung an ein anderes Land](ADAPT_TO_YOUR_COUNTRY.md). Ideen, Fragen und konkrete Verbesserungen kannst du als [GitHub Issue](https://github.com/tholo91/brief-nach-berlin/issues) eröffnen.
+The runtime also refreshes on requests, at most once per six hours per process. Failed imports preserve the last validated snapshot; data older than seven days is not offered for selection or letter generation. This is official public reference data, not persisted visitor data. Review the source's reuse terms and attribution for the final public launch. No deputy portraits or private addresses are copied.
 
-## For builders outside Germany
+## Olaia
 
-Brief-nach-Berlin is an open-source civic-tech project for turning a personal political concern into a well-addressed letter. People review, personalize and send their own letters.
+The root Dockerfile builds the Next.js standalone server from `web/`, listens on `0.0.0.0:$PORT` (default 3000), and runs as a non-root user. `/api/health` is the liveness endpoint. Build requires no secrets. Docker's context excludes env files, local dependencies, tests' output and unrelated upstream documentation.
 
-To adapt it to another country, start with the [adaptation guide](ADAPT_TO_YOUR_COUNTRY.md). Replace the German representative, constituency and data layers with reliable local sources, then validate the political routing, language, privacy model and mailing flow locally.
+- Project: Carta à Assembleia (`YWsqF8a8AEK5`).
+- GitHub app: Carta à Assembleia Portugal (`KwKreIfRPS8-`).
+- Source branch: `codex/portugal-mvp`.
+- Intended production URL: https://carta-a-assembleia.olaia.eu (only live after Olaia promotion).
+- Configure `OPENROUTER_API_KEY` in the app's environment dashboard. It is never sent to the browser.
+- Olaia injects `OLAIA_EMAIL_ENDPOINT` and `OLAIA_EMAIL_TOKEN`; template slug is `carta-pronta`.
+- Optional `LETTER_TOKEN_SECRET` provides stable email tickets across restarts/instances. Without it tickets are process-local and expire after an hour; downloads remain available.
+- Push a branch preview, wait for the build, inspect it, and approve its pinned image in Olaia. Environment changes require a fresh release. Never bypass promotion approval.
 
-If you build an adaptation, please open an [issue](https://github.com/tholo91/brief-nach-berlin/issues) so others can find it.
+The initial setup also created an unused empty app named Carta à Assembleia; it has no deployment or persistent services. The GitHub-backed app above is the deployment target.
 
-## Projekt und Finanzierung
+## Data handling and limits
 
-Brief-nach-Berlin ist eine kostenlose, gemeinnützige Initiative in Trägerschaft der [WE AID gGmbH](https://www.brief-nach-berlin.de/spenden). Spenden helfen bei Betrieb und Weiterentwicklung; Teilen, Anpassen und Beitragen sind ebenso wertvoll.
+Visitor concerns and drafts stay in browser memory until generation/email is requested. The app does not log or persist their content; OpenRouter, its model provider and Olaia necessarily process submitted data under their service settings. No localStorage or cookies are used by the app. A before-unload notice helps prevent accidental loss; download before leaving.
 
-Das Projekt wurde aus einem Bundestags-Praktikum und einem Studium der Politikwissenschaft heraus entwickelt. Die Ausgangsfrage war: Wie kann ich meiner Mutter die Ausrede nehmen, einen Brief nicht zu schreiben, obwohl sie sich über Politik ärgert?
+Request bodies are bounded, recipient IDs are checked against current data, browser origin is checked, and provider requests have deadlines. Generation is capped at five requests per IP per hour and sixty per instance per hour. Email requires a short-lived signed generation ticket, explicit consent, IP and destination limits, and an idempotency key. These in-memory limits reset on restart and are not distributed; retain a single app replica for this MVP and set a OpenRouter account budget. Add shared rate limiting before scaling or a larger public launch. The proxy's forwarded IP behavior should be confirmed; the global ceiling also bounds requests if those headers are absent or spoofed.
 
-Ein Solo-Projekt von [Thomas Lorenz](https://thomas-lorenz.eu).
+## Release status and owner actions
+
+This is a test deployment. User-authorized contact `test@test.com` is visibly described as temporary; no legal operator identity is invented. Pages carry noindex and robots disallow rules. Before a real public launch, replace the operator/contact details, confirm provider privacy/retention and training settings, review data reuse terms, then decide whether to enable indexing. There is no custom domain.
+
+Live OpenRouter generation requires the owner-supplied key. Automated tests use mocked providers; an owner-initiated real generation and self-email check should verify credentials, delivery and final Portuguese quality before production approval.
+
+## License
+
+Code retains the upstream MIT license and copyright notice in LICENSE. The adaptation does not imply endorsement by the original author, Parliament or a political party. External parliamentary data remains attributable to the Assembleia da República and subject to its applicable terms.
+
+## OpenRouter configuration
+
+The app calls OpenRouter's Chat Completions API using native server-side fetch, not the Mistral SDK. Only `OPENROUTER_API_KEY` is required; the old `MISTRAL_API_KEY` placeholder can be ignored. The primary model is `mistralai/mistral-large-2512`, routed only to Mistral. Temporary HTTP 429/500/502/503/504 failures trigger one fallback request to `openai/gpt-4.1-mini`, routed only to Microsoft Azure (OpenRouter provider slug `azure`), within a shared 45-second deadline. Both requests disable unrestricted provider fallbacks and enforce `data_collection: "deny"` and `zdr: true`. Authentication, credit, moderation and malformed-output failures are not retried. If the route remains unavailable the app shows a safe diagnostic code (for example AI_HTTP_402 for insufficient credits), without exposing provider response bodies, user text or keys. The privacy and about pages disclose both model providers. These requested policies do not guarantee EU-only processing or replace review of OpenRouter's own logging/privacy settings. Disable prompt/completion logging and data-sharing in the account and set a spending limit. See [OpenRouter routing](https://openrouter.ai/docs/guides/routing/provider-selection) and [data policies](https://openrouter.ai/docs/guides/privacy/provider-logging).

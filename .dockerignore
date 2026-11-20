@@ -1,0 +1,13 @@
+**
+!Dockerfile
+!web
+!web/package.json
+!web/package-lock.json
+!web/tsconfig.json
+!web/next.config.ts
+!web/src
+!web/src/**
+!web/data
+!web/data/parliament.json
+!web/public
+!web/public/**
